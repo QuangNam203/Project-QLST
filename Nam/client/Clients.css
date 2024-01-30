@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{margin: 0; padding: 0;box-sizing: border-box;}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper-class::-webkit-scrollbar {
+    width: 0px;
+  }
+
+.wrapperContainer{
+    position: fixed;
+    height: 100%;
+    width: 80% !important;
+    margin: auto;
+    left: 10%;
+}
+
+.wrapperContainer .title{
+    position: fixed;
+    width: 20%;
+    height: 5%;
+    top: 11%;
+    right: 0;
+}
+
+.wrapperContainer .title ul{
+    display: flex;
+    height: 100%;
+    max-width: 85%;
+    background-color: aqua;
+    margin: auto;
+    border-radius: 15px;
+}
+.wrapperContainer .title ul li{
+    margin: auto;
+    list-style: none;
+    transition: 0.4s;
+}
+.wrapperContainer .title ul li:hover{
+    padding-bottom: 15px;
+}
+.wrapperContainer .title ul li a{
+    text-decoration: none;
+    font-size: 17px;
+    font-family: poppins;
+    font-weight: 500;
+}
+
+.wrapperContainer .wrapper-class{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 18%;
+    overflow-y: scroll;
+}
+
+.wrapperContainer .wrapper-class .product{
+    width: 25%;
+    height: 40%;
+    float: left;
+}
+.wrapperContainer .wrapper-class .product .items-product{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    background-color: burlywood;
+}
+
+.wrapperContainer .wrapper-class .product .items-product:hover{
+    box-shadow: 0px 5px 17px -2px black;
+}
+
+.wrapperContainer .wrapper-class .product .items-product .img{
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapperContainer .wrapper-class .product .items-product:hover .img button{
+    transform: translateY(0px);
+}
+
+
+.wrapperContainer .wrapper-class .product .items-product .text{
+    height: 20%;
+}
+.wrapperContainer .wrapper-class .product .items-product .text p{
+    height: 30%;
+    font-size: 13px;
+    font-family: poppins;
+    font-weight: 500;
+    padding-left: 10px;
+}
+.wrapperContainer .wrapper-class .product .items-product .text span{
+    float: right;
+    padding-right: 10px;
+}
+.wrapperContainer .wrapper-class .product .items-product .img button{
+    position: absolute;
+    outline: none;
+    font-size: 25px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    transform: translateY(70px);
+    transition: 0.4s;
+    border-radius: 50%;
+    background-color: aqua;
+}
+
+.wrapperContainer .wrapper-class .product .items-product .img button:hover{
+    transform: scale(1.2);
+    box-shadow: 2px 2px 10px 2px pink;
+}
+
+.wrapperContainer .wrapper-class .product .items-product button:first-child{
+    left: 25%;
+}
+.wrapperContainer .wrapper-class .product .items-product button:last-child{
+    left: 53%;
+}
+
+/* ----------------------------------------------- Custom Items -------------------------------------------- */
+
+.customItem{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    visibility: hidden;
+}
+
+.customItem.active{
+    visibility: visible;
+}
+.customItem .closeSuccess{
+    width: 100%;
+    height: 100%;
+    background-color: #99989885;
+    position: absolute;
+}
+
+.layoutWrapper {
+    width: 40%;
+    height: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+    transform: translateY(-50%) translateX(-50%);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px -5px black;
+}
+.layoutWrapper .wrapper-Items{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.layoutWrapper .wrapper-Items .image{
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.layoutWrapper .wrapper-Items .image span {
+    width: 15px;
+    height: 15px;
+    position: fixed;
+    top: 5%;
+    border-radius: 50%;
+    left: 5%;
+    background-color: green;
+}
+
+.layoutWrapper .wrapper-Items .image span::after,
+.layoutWrapper .wrapper-Items .image span::before{
+    content: '';
+    background: orangered;
+    width: 15px;
+    height: 15px;
+    position: fixed;
+    top: 5%;
+    border-radius: 50%;
+    left: 2%;
+}
+.layoutWrapper .wrapper-Items .image span::after{
+    left: 8%;
+    background-color: yellow;
+}
+
+.layoutWrapper .wrapper-Items .image::before{
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 100%;
+    left: -9%;
+    transform: skew(377deg);
+    background-color: orange;
+    border-right: 4px solid pink;
+}
+
+.layoutWrapper .wrapper-Items .image img{
+    position: relative;
+    width: 165px;
+    height: 165px;
+    margin-top: 60%;
+    margin-left: 15%;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.layoutWrapper .introduce{
+    width: 60%;
+}
+.layoutWrapper .introduce .introduceText{
+    width: 100%;
+    height: 60%;
+}
+
+.layoutWrapper .introduce .introduceText .name-produce {
+    font-size: 15px;
+    font-family: poppins;
+    font-weight: 400;
+    height: 80px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.layoutWrapper .introduce .introduceText .precio{
+    height: 40px;
+    width: 90%;
+    display: inline-block;
+    background-color: #f1f0f0;
+    border-radius: 6px;
+}
+
+.layoutWrapper .introduce .introduceText .precio ul {
+    display: flex;
+    line-height: 44px;
+}
+
+.layoutWrapper .introduce .introduceText .precio ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 0 10px;
+}
+.layoutWrapper .introduce .introduceText .precio ul li:first-child,
+.layoutWrapper .introduce .introduceText .precio ul li:last-child
+{
+    font-size: 13px;
+}
+.layoutWrapper .introduce .introduceText .precio ul li:nth-child(3) i{
+    background-color: orangered;
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+
+.layoutWrapper .introduce .introduceText .seguro{
+    width: 100%;
+    height: 50px;
+}
+
+.layoutWrapper .introduce .introduceText .seguro span::before,
+.layoutWrapper .introduce .introduceText .seguro span::after,
+.layoutWrapper .introduce .introduceText .seguro span{
+    line-height: 50px;
+    font-size: 12px;
+    font-family: tahoma;
+    font-weight: 400;
+}
+
+.layoutWrapper .introduce .introduceText .seguro span::before{
+    content: 'Bảo Hiểm';
+    margin-left: 40px;
+    padding-right: 20px;
+    color: #999898;
+}
+
+.layoutWrapper .introduce .introduceText .seguro span::after{
+    content: 'mới';
+    padding: 2px 10px;
+    margin-left: 5px;
+    background-color: orangered;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.layoutWrapper .introduce .introduceText .clasificar{
+    width: 70%;
+    height: 10%;
+    margin-left: 9%;
+    display: flex;
+    font-size: 12px;
+    font-family: tahoma;
+    margin-bottom: 10px;
+}
+
+.layoutWrapper .introduce .introduceText .clasificar span{
+    width: 30%;
+    color: #999898;
+}
+
+.layoutWrapper .introduce .introduceText .clasificar .clasificar-btn{
+    width: 70%;
+}
+.layoutWrapper .introduce .introduceText .clasificar .clasificar-btn span.loai{
+    display: inline-block;
+    width: 40%;
+    height: 25px;
+    margin-bottom: 10px;
+    background: none;
+    border: 1px solid rgb(61, 61, 61);
+    font-size: 15px;
+    text-align: center;
+    line-height: 22px;
+    color: black;
+}
+.layoutWrapper .introduce .introduceText .clasificar .clasificar-btn button:hover{
+    background-color: rgb(141, 240, 141);
+}
+
+.layoutWrapper .introduce .introduceText .number{
+    width: 50%;
+    height: 30px;
+    margin-left: 40%;
+    margin-bottom: 20px;
+}
+.layoutWrapper .introduce .introduceText .number span{
+    display: inline-block;
+    width: 30px;
+    height: 100%;
+    background: cornsilk;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.layoutWrapper .introduce .introduceText .number span:first-child{
+    border-bottom-left-radius:15px;
+    border-top-left-radius:15px;
+}
+.layoutWrapper .introduce .introduceText .number span:last-child{
+    border-bottom-right-radius:15px;
+    border-top-right-radius:15px;
+}
+
+.layoutWrapper .introduce .introduceText .number input{
+    width: 30%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 28px;
+    background-color: #ede8e8;
+}
+
+.layoutWrapper .introduce .introduceText .perform {
+    width: 70%;
+    margin-left: 20%;
+}
+.layoutWrapper .introduce .introduceText .perform ion-icon{
+    font-size: 20px;
+}
+
+.layoutWrapper .introduce .introduceText .perform button {
+    border: none;
+    outline: none;
+    background: orchid;
+    border-radius: 6px;
+    margin: 10px;
+    font-size: 12px;
+    padding: 4px;
+}
+
+/* ====================================================================== Notification ==================================================== */
+.Notification {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    color: cadetblue;
+    top: 1%;
+    right: 20%;
+    z-index: 5;
+}
+
+.mess-Notification::-webkit-scrollbar{
+    width: 0;
+}
+
+.mess-Notification {
+    max-width: 400px;
+    height: 500px;
+    background: #fbf6f6;
+    position: fixed;
+    top: 8%;
+    left: 65%;
+    border-radius: 15px;
+    overflow-y: scroll;
+    z-index: 10;
+    box-shadow: 0px 0px 20px -3px;
+    visibility: hidden;
+}
+
+.mess-Notification.active{
+    visibility: visible;
+}
+
+.mess-Notification .content {
+    display: inline-block;
+    margin: 10px 0px;
+    width: 100%;
+    padding: 5px 0;
+}
+.mess-Notification .content:hover{
+    background-color: #e2e2e2;
+}
+
+.mess-Notification .content img {
+    width: 15%;
+    border-radius: 50%;
+    float: left;
+    margin: 0 10px;
+}
+
+.mess-Notification .content .text-content {
+    width: 80%;
+    float: left;
+    height: 60px;
+}
+
+.mess-Notification .content .text-content .info-Product {
+    display: flex;
+    height: 42px;
+    opacity: 0.7;
+}
+
+.mess-Notification .content .text-content>p {
+    font-size: 15px;
+    font-family: tahoma;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.mess-Notification .content .text-content .info-Product span:last-child {
+    font-size: 11px;
+    width: 20%;
+}
+
+.mess-Notification .content .text-content .info-Product span:first-child::-webkit-scrollbar{
+    width: 0;
+}
+
+.mess-Notification .content .text-content .info-Product span:first-child {
+    width: 80%;
+    font-size: 12px;
+    font-family: tahoma;
+    overflow-y: scroll;
+}
+
+/*================================================= PAY ============================================== */
+.wrapper-pay {
+    position: fixed;
+    width: 70%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 15px;
+    overflow: hidden;
+    background: antiquewhite;
+    visibility: hidden;
+}
+
+.wrapper-pay.active{
+    visibility: visible;
+}
+
+.wrapper-pay .info-Product {
+    width: 40%;
+    height: 100%;
+    float: right;
+    overflow: hidden;
+}
+
+.wrapper-pay .listProduct {
+    width: 60%;
+    height: 100%;
+    background: aqua;
+    overflow-y: scroll;
+    float: left;
+}
+
+
+.listProduct::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+.listProduct::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+.listProduct::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(#2a84eb),
+									   to(#043055),
+									   color-stop(.6,#4c519e))
+}
+
+
+.wrapper-pay .listProduct .product img {
+    width: 20%;
+    height: 100%;
+    border-radius: 10px;
+    float: left;
+}
+
+.wrapper-pay .listProduct .product {
+    width: 100%;
+    height: 20%;
+    background: aqua;
+    padding: 10px;
+}
+
+.wrapper-pay .listProduct .product .content {
+    width: 77%;
+    float: left;
+    margin-left: 3%;
+    height: 100%;
+}
+
+.wrapper-pay .listProduct .product .content .name {
+    width: 100%;
+    height: 70%;
+    overflow-y: scroll;
+    padding-top: 10px;
+    font-family: cursive;
+}
+.name::-webkit-scrollbar{
+    width: 0px;
+}
+
+.wrapper-pay .listProduct .product .content .describe span {
+    display: inline-block;
+    width: 30%;
+    font-family: cursive;
+}
+
+.wrapper-pay .listProduct .product .content .describe {
+    width: 100%;
+    height: 40%;
+    line-height: 22px;
+}
+
+.wrapper-pay .info-Product .infoClinent {
+    width: 90%;
+    height: 70%;
+    background: aliceblue;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.wrapper-pay .info-Product .payMoney {
+    width: 90%;
+    height: 10%;
+    margin: 19px;
+    background: aliceblue;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 33px;
+    font-family: cursive;
+}
+
+.wrapper-pay .info-Product .infoClinent label {
+    font-family: cursive;
+    margin-left: 21px;
+    font-size: 15px;
+    margin-right: 20%;
+}
+
+.wrapper-pay .info-Product .infoClinent input {
+    width: 90%;
+    height: 9%;
+    margin: 12px;
+    border: none;
+    outline: 2px solid pink;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+select#mulpay {
+    padding: 5px;
+    border-radius: 7px;
+    outline: 2px solid pink;
+    border: none;}
+
+textarea#note {
+    margin: 17px;
+    border: none;
+    outline: 1px solid pink;
+}
+
+.wrapper-pay .info-Product button {
+    margin-left: 30%;
+    margin-top: 4%;
+    width: 40%;
+    height: 7%;
+    border: none;
+    outline: 1px solid pink;
+    border-radius: 6px;
+    background: red;
+    color: white;
+}
+
+.back{
+    position: fixed;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    background: #1863ff;
+    color: white;
+    left: 1%;
+    top: 12%;
+    border-radius: 50%;
+}
+
+.back ion-icon{
+    font-size: 26px;
+    padding: 12.4px;
+}

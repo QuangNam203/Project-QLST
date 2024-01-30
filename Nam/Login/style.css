@@ -1,0 +1,146 @@
+@import url('<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">');
+
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Open Sans',sans-serif;}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg,#ff357a,#fff172);
+}
+.container{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container i{
+    position: absolute;
+    inset: 0;
+    border: 2px solid #fff;
+    transition: 0.5s;
+}
+.container i:nth-child(1){
+    border-radius: 44% 56% 34% 66% / 23% 46% 54% 77% ;
+    animation: animate 6s linear infinite;
+}
+.container i:nth-child(2){
+    border-radius: 29% 71% 34% 66% / 46% 35% 65% 54% ;
+    animation: animate 4s linear infinite;
+}
+.container i:nth-child(3){
+    border-radius: 64% 36% 69% 31% / 46% 35% 65% 54%;
+    animation: animate2 5s linear infinite;
+}
+
+@keyframes animate{
+    to{
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate2{
+    to{
+        transform: rotate(360deg);
+    }
+    from{
+        transform: rotate(0deg);
+    }
+}
+
+.container:hover i{
+    border: 6px solid var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
+}
+
+
+
+.container .login{
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container .login .error-text {
+    color: #721c24;
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    margin-bottom: 10px;
+    display: none;
+}
+
+
+.container .login h2{
+    font-size: 2em;
+    color: white;
+}
+
+.name-details{
+    display: flex;
+}
+.container .login .inputBx{
+    position: relative;
+    width: 100%;
+}
+
+.container .login .inputBx input{
+    position: relative;
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: #fff;
+    box-shadow: none;
+    outline: none;
+}
+.container .login .inputBx input[type="submit"]{
+    background: linear-gradient(45deg,#ff357a,#fff172);
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.container .login .links{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.container .login .links a{
+    color: #fff;
+    text-decoration: none;
+}
+.field.image label{
+    display: inline-block;
+    color: white;
+    font-family: fantasy;
+    font-size: 22px;
+    padding-bottom: 10px;
+
+}
+.field.image input {
+    color: aliceblue;
+}
+
+.field.image {
+    height: 50px;
+}
